@@ -49,7 +49,7 @@ df = stocks
 def get_stocks(
     ticker: str = Query(None, description="Тикер, например AAPL"),
     page: int = Query(1, ge=1),
-    page_size: int = Query(50, ge=1, le=2000)
+    page_size: int = Query(50, ge=1, le=10000)
 ):
     data = df.copy()
     if ticker:

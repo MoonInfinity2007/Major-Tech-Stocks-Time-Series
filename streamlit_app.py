@@ -37,7 +37,7 @@ def load_all_data():
     rows = []
     page = 1
     while True:
-        r = requests.get(f"{API_URL}/stocks", params={"page": page, "page_size": 1000}).json()
+        r = requests.get(f"{API_URL}/stocks", params={"page": page, "page_size": 5000}).json()
         rows.extend(r["data"])
         if len(rows) >= r["total"]:
             break
